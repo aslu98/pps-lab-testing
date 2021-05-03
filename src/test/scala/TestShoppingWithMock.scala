@@ -47,6 +47,5 @@ class TestShoppingWithMock extends FunSuite with MockFactory with Matchers {
     shopping.pick(product1, 2)
     shopping.pick(product1, 6)
     shopping.pick(product1, 1)
-
   }
 }
