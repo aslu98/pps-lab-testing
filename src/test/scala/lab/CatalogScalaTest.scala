@@ -1,10 +1,11 @@
+package lab
+
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
-import org.scalatest.{FlatSpec, Matchers}
-import testLab.{BasicCatalog, _};
+import org.scalatest.{FlatSpec, Matchers};
 
 @RunWith(classOf[JUnitRunner])
-class CatalogTest extends FlatSpec with Matchers {
+class CatalogScalaTest extends FlatSpec with Matchers {
   val tomato = Product("tomato");
   val shoes = Product("shoes");
   val cat = new BasicCatalog(Map(shoes -> Price(15.99), tomato -> Price(1.00)));

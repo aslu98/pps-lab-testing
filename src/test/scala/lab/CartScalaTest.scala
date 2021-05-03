@@ -1,10 +1,11 @@
+package lab
+
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
-import org.scalatest.{FunSuite, Matchers}
-import testLab._;
+import org.scalatest.{FunSuite, Matchers};
 
 @RunWith(classOf[JUnitRunner])
-class CartTest extends FunSuite with Matchers {
+class CartScalaTest extends FunSuite with Matchers {
   val cart = new BasicCart();
   val it = Item(Product("shoes"), ItemDetails(2, Price(35.99)));
   val otherit = Item(Product("tomato"), ItemDetails(10, Price(10.00)));

@@ -1,4 +1,4 @@
-package testLab
+package lab
 
 case class Product(name: String)
 case class Price(value: Double)

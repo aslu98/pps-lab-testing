@@ -1,10 +1,11 @@
+package lab
+
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
-import org.scalatest.{FunSpec, Matchers}
-import testLab._;
+import org.scalatest.{FunSpec, Matchers};
 
 @RunWith(classOf[JUnitRunner])
-class WarehouseTest extends FunSpec with Matchers {
+class WarehouseScalaTest extends FunSpec with Matchers {
   val tomato = Product("tomato");
   val shoes = Product("shoes");
   val warehouse = new BasicWarehouse();

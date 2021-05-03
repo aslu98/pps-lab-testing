@@ -1,4 +1,4 @@
-package testLab
+package lab
 
 trait Logger {
   def log(msg: String)

@@ -1,12 +1,12 @@
+package lab
+
 import org.junit.runner.RunWith
 import org.scalamock.scalatest.MockFactory
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.{FunSuite, Matchers}
-import testLab.{BasicCart, BasicCatalog, BasicWarehouse, Cart, Catalog, Item, ItemDetails, Logger, Price, Product, Shopping, Warehouse}
-import testLecture.code.Server._
 
 @RunWith(classOf[JUnitRunner])
-class TestShoppingWithMock extends FunSuite with MockFactory with Matchers {
+class ShoppingMockTest extends FunSuite with MockFactory with Matchers {
   test("Test Shopping"){
     val loggerMock= mock[Logger]
     val catalogMock = mock[Catalog]
