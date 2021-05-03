@@ -32,3 +32,22 @@ class TestOnLists extends Properties("Lists") {
     l1.reverse.reverse == l1
   }
 }
+
+
+@RunWith(classOf[ScalaCheckJUnitRunner])
+class TestPalindromes extends Properties("Persons") {
+
+  case class Palindrome(string: String, char:Option[Char]) {
+    def get(): String = string ++ char.getOrElse("").toString ++ string.reverse
+  }
+
+  implicit val arbitraryPalindrome: Arbitrary[Palindrome] = Arbitrary(
+    for(string <- Gen.alphaStr;
+        char <- Gen.option[Char](Gen.alphaChar))
+      yield Palindrome(string, char)
+  )
+
+  property("Reverse") = forAll { (p: Palindrome) =>
+    p.get == p.get.reverse
+  }
+}
