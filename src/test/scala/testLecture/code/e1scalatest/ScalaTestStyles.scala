@@ -40,12 +40,18 @@ class BasicFunSpec extends FunSpec with Matchers {
     }
 
     describe(" when not empty"){
-      pending
+      it(" should not have size 0 ") {
+        assert(Set(1, 2).size != 0)
+      }
     }
   }
 
   describe("Two sets") {
-    pending
+    describe("when with the same values"){
+      it("should be equal") {
+        assert(Set(1, 2) == Set(1, 2))
+      }
+    }
   }
 }
 
