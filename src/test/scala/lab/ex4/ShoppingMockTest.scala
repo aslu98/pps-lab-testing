@@ -1,5 +1,6 @@
-package lab
+package lab.ex4
 
+import lab._
 import org.junit.runner.RunWith
 import org.scalamock.scalatest.MockFactory
 import org.scalatest.junit.JUnitRunner

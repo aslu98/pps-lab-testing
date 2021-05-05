@@ -1,8 +1,7 @@
-package lab
+package lab.ex5
 
 import org.junit.runner.RunWith
-import org.scalacheck
-import org.scalacheck.Prop.{exists, forAll}
+import org.scalacheck.Prop.forAll
 import org.scalacheck.{Arbitrary, Gen, Prop, Properties}
 import testLecture.ScalaCheckJUnitRunner
 

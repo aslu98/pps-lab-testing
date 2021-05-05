@@ -10,6 +10,7 @@ trait Cart {
   def content: Set[Item]
   def size: Int
   def totalCost: Double
+  def remove (product: Product)
 }
 
 class BasicCart(private var items: Map[Product, ItemDetails] = Map()) extends Cart {
@@ -21,6 +22,7 @@ class BasicCart(private var items: Map[Product, ItemDetails] = Map()) extends Ca
   def content: Set[Item] = items.map { case (prod,details) => Item(prod,details) } toSet
   def size = items.size
   def totalCost: Double = items.values.foldRight(0.0)(_.price.value+_)
+  def remove(product: Product) = items = items.filter(item => item._1 != product)
 }
 
 trait Catalog {
@@ -71,6 +73,7 @@ class Shopping(private val warehouse: Warehouse,
     if(howMany>0) {
       logger.log(s"The warehouse has $howMany pieces; adding them to cart.")
       val price = catalog.priceFor(p, howMany)
+      System.out.println(catalog.products.toString())
       logger.log(s"$howMany pieces of $p collectively cost $price.")
       val item = Item(p, ItemDetails(howMany, price))
       cart.add(item)
