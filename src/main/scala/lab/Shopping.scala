@@ -73,7 +73,6 @@ class Shopping(private val warehouse: Warehouse,
     if(howMany>0) {
       logger.log(s"The warehouse has $howMany pieces; adding them to cart.")
       val price = catalog.priceFor(p, howMany)
-      System.out.println(catalog.products.toString())
       logger.log(s"$howMany pieces of $p collectively cost $price.")
       val item = Item(p, ItemDetails(howMany, price))
       cart.add(item)
